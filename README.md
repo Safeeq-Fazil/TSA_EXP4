@@ -45,7 +45,7 @@ vegetable_price_data = pd.read_csv('vegetable.csv')
 vegetable_price_data['Date'] = pd.to_datetime(vegetable_price_data['Date'])
 vegetable_price_data.set_index('Date', inplace=True)
 
-# Resample the 'Chennai' column by day to get daily price
+# Resample the 'Commodity' column by day to get daily price
 daily_price = vegetable_price_data['Commodity'].resample('D').sum()
 
 # Simulating an ARMA(1,1) Process
@@ -96,6 +96,7 @@ plt.show()
 
 
 ## Autocorrelation:
+![image](https://github.com/user-attachments/assets/72151952-1d21-4936-b0af-e85d23ecd32e)
 
 
 ## RESULT:
